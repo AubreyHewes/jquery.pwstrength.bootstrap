@@ -58,6 +58,9 @@ var i18n = {};
 
 var rulesEngine = {};
 
+/* 
+// Should inject jQuery from testing framework.
+// The following breaks webpack/builders et al
 try {
     if (!jQuery && module && module.exports) {
         var jQuery = require("jquery"),
@@ -65,7 +68,7 @@ try {
         jQuery = jQuery(jsdom().defaultView);
     }
 } catch (ignore) {}
-
+*/
 (function ($, rulesEngine) {
     "use strict";
     var validation = {};
